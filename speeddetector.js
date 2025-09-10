@@ -1,15 +1,14 @@
-/*Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
-
-For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”*/
-
-
+//Speed Detection main function
 function speedDetection(speed) {
   var message = '';
 
+  // For every 5km/h
   var demeritInterval = 5;
   var speedLimit = 70;
+  //Calculates the number of demerit points
   const points = Math.floor((speed-speedLimit)/demeritInterval);
 
+  // Condition handles cases above the speed limit and exits the function
   if (speed > speedLimit) {
     if (points > 12) {
       message = `Licence suspended. Points are: ${points}`
@@ -18,7 +17,10 @@ function speedDetection(speed) {
       message = `Points: ${points}`;
       return message;
     }
-  }else if (speed == speedLimit) {
+  }
+
+  // Condition that handles the message if within speed limit
+  if (speed == speedLimit) {
     return message = "Ok";
   }
 

@@ -6,6 +6,7 @@ function gradingSystem() {
     return message = "Invalid input";
   }
 
+  //Checks the marks and returns the grade
   if (marks > 79) {
     return message = "A";
   }else if (marks >= 60 && marks <= 79) {
