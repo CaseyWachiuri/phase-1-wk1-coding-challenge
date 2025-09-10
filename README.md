@@ -5,10 +5,7 @@
 #### By Casey Waweru
 
 ## Description
-This repository consists of multiple toy problems to help with practicing Javascript concepts through implementation. It consists of:
-Student Grade Generator
-Speed Detector
-Net Salary Calculator
+This repository consists of multiple toy problems to help with practicing Javascript concepts through implementation. It consists a Student Grade Generator, Speed Detector and Net Salary Calculator
 
 ## Installation Requirements
 Git
