@@ -1,9 +1,9 @@
-function gradingSystem() {
+function gradingSystem(marks) {
   let message = "";
 
   //Validates if the marks are within the right range
   if (marks < 0 || marks > 100) {
-    return message = "Invalid input";
+    throw new Error("Invalid input" + marks);
   }
 
   //Checks the marks and returns the grade
@@ -21,7 +21,15 @@ function gradingSystem() {
 
 }
 
-const prompt = require('prompt-sync')();
-const marks = prompt("Input your marks: ");
+//Infinite loop
+for(;;) {
+ try {
+    const prompt = require('prompt-sync')();
+    const marks = prompt("Input your marks: ");
+    console.log(gradingSystem(marks));
+    break;
+ } catch (error) {
+    console.log("Something went wrong: " + error);
+  }
+}
 
-console.log(gradingSystem(marks));
