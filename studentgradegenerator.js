@@ -21,13 +21,13 @@ function gradingSystem(marks) {
 
 }
 
-//Infinite loop
+//Infinite loop that doesn't terminate on its own
 for(;;) {
  try {
     const prompt = require('prompt-sync')();
     const marks = prompt("Input your marks: ");
     console.log(gradingSystem(marks));
-    break;
+    break; // Breaks out of the loop when a valid direction is given
  } catch (error) {
     console.log("Something went wrong: " + error);
   }
