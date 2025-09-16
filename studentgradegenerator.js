@@ -9,13 +9,13 @@ function gradingSystem(marks) {
   //Checks the marks and returns the grade
   if (marks > 79) {
     return message = "A";
-  }else if (marks >= 60 && marks <= 79) {
+  }else if (marks >= 60) {
     return message = "B";
-  }else if (marks >= 49 && marks <= 59) {
+  }else if (marks >= 49) {
     return message = "C";
-  }else if (marks >= 40 && marks <= 49) {
+  }else if (marks >= 40) {
     return message = "D";
-  }else if (marks < 40) {
+  }else{
     return message = "E";
   }
 
